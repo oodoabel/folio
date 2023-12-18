@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>White Portfolio</title>
+        <style>
+            html{
+                scroll-behavior: smooth;
+            }
+            body{
+                margin: 0px;
+                width: 100vw;
+                max-width: 100vw;
+                overflow-x: hidden;
+                background-color: #ffffff;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0'%3E%3Cstop offset='0' stop-color='%230FF'/%3E%3Cstop offset='1' stop-color='%23CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23F00'/%3E%3Cstop offset='1' stop-color='%23FC0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='2'%3E%3Cpath transform='translate(0 0)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='4' transform='rotate(0 800 450)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(0 0)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='4'%3E%3Cpath transform='translate(0 0)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='8' transform='rotate(0 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='rotate(0 1400 132)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                background-attachment: fixed;
+                background-size: cover;
+                transition: 800ms;
+            }
+            .header{
+                display: flex;
+                position: fixed;
+                justify-content: space-between;
+                align-items: center;
+                height: 80px;
+                width: 100%;
+                overflow: hidden;
+                background-color: white;
+                box-shadow: 0px 1px 40px rgba(0, 0, 0, 0.123);
+                color: black;
+                font-family: 'Courier New', Courier, monospace;
+                z-index: 99;
+                
+            }
+            
+            .logo{
+                padding: 7px 10px;
+                height: 70px;
+                margin-bottom: 20px;
+                margin-left: 20px;
+            }
+            .highlights_tech_ltd{
+                padding-left: 20px;
+                color: rgb(0, 0, 48);
+            }
+            .anchor{
+                padding: 20px;
+                font-weight: bolder;
+                text-decoration: none;
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .anchor:hover{
+                color: rgb(255, 72, 0);
+            }
+            .message_me{
+                display: flex;
+                padding: 0px 45px;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: 20px;
+                font-weight: bolder;
+                cursor: pointer;
+                font-size: 15px;
+                background-color: rgb(255, 72, 0);
+                border: none;
+                border-radius: 8px;
+                width: 200px;
+                height: 50px;
+                color: white;
+            }
+            /* @media (min-width: 350px){
+                .header{
+                    width: 100;
+                    height: 30px;
+                }
+                .logo{
+                    height: 100%;
+                    padding: 0px 5px; */
+                /* }
+            } */
+            .body1{
+                display: flex;
+                padding-top: 20px;
+                color: rgb(0, 0, 48);
+                padding-top: 100PX;
+                width: 100%;
+                height: 1000px;
+                backdrop-filter: blur(1.5px);
+                
+            }
+            .write{
+                padding-top: 150px;
+                padding-left: 100px;
+                height: 100%;
+                width: 50%;
+            }
+            .h1{
+                font-size: 5rem;
+                /* margin: 0px; */
+            }
+            .h3{
+                font-size: 1.5rem;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .h5{
+                margin: 15px 0px;
+                font-size: 20px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .dp{
+                height: 100%;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .mypix{
+                /* border-bottom: 10px solid rgb(255, 72, 0);
+                border-right: 10px solid rgb(255, 72, 0);
+                border-left: 10px solid rgb(255, 72, 0); */
+                background-color: transparent;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.259);
+                border-bottom-right-radius: 30%;
+                border-top-left-radius: 30%;
+                height: 500px;
+                width: auto;
+                margin-bottom: 200px;
+                transition: ease-out;
+                transition-duration: 5s;
+            }
+            .body2{
+                display: flex;
+                justify-content: space-between;
+                color: rgb(0, 0, 48);
+                height: 600px;
+                width: 100%;
+                backdrop-filter: blur(1.5px);
+
+
+            }
+            .left2{                
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                height: 100%;
+                width: 700px;
+                padding-left: 100px;
+            }
+            .right2{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: start;
+                height: 100%;
+                width: 40%;
+                padding-left: 90px;
+                
+            }
+            .h12{
+                font-size: 4rem;
+            }
+            .any{
+                font-size: 3rem;
+            }
+            .design_is_not_marely{
+                text-align: justify;
+                color: rgb(73, 73, 73);
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .gettome{
+                color: rgb(0, 0, 48);
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 2rem;
+            }
+            .email{
+                font-family: 'Courier New', Courier, monospace;
+                color: rgb(255, 72, 0);
+                text-decoration: underline;
+
+            }
+            .body3{
+                margin-top: 100px;
+                display: flex;
+                flex-direction: column;
+                height: 60rem;
+                width: 100dvw;
+                background-color: #050233;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23382001' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%233A3E3E'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+                /* background-color: rgb(0, 0, 48); */
+                border-top: 0.2rem solid rgb(255, 72, 0);
+                box-shadow: -2px -2px 1rem rgb(0, 0, 48);
+            }
+            .whatservice{
+                font-size: 2rem;
+                padding-left: 100px;
+                color: rgb(255, 255, 255);
+            }
+            .cards{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-right: 20px;
+                
+            }
+            .card{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                overflow: hidden;
+                width: 400px;
+                height: 300px;
+                background-color: white;
+                text-align: center;
+                padding: 50px;
+                margin: 20px;
+                border-radius: 15px;
+            }
+            .card:hover{
+                transition-duration: 0.1s;
+                background-color: rgba(255, 72, 0, 0.953);
+            }
+            .uiux{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .round1, .round2, .round3{ 
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                background-color: rgb(255, 255, 255);
+            }
+            .round1{
+                overflow: hidden;
+                
+            }
+            .round1 img{
+                height: 100%;
+                width: 100%;
+            }
+            .round2{
+                overflow: hidden;
+                
+            }
+            .round2 img{
+                height: 100%;
+                width: 100%;
+            }
+            .round3{
+                overflow: hidden;
+                
+            }
+            .round3 img{
+                height: 100%;
+                width: 100%;
+            }
+            .ryt{
+                margin: 0px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .round:hover{
+                background-color: rgb(255, 255, 255);
+            }
+            .patronize{
+                color: white;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                display: flex;
+                justify-content: center;
+                font-style: italic;
+                font-size: 100px;
+                padding-top: 50px;
+            }
+            .body4{
+                font-family:'Courier New', Courier, monospace;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: -15px;
+                height: 500px;
+                width: 100%;
+                /* padding: 100px; */
+                background-color: rgb(238, 246, 255)
+            }
+            .dont{
+                color: rgb(255, 72, 0);
+                font-size: 50px;
+            }
+            .contactmenow{
+                font-size: 20px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: bolder;
+                color: white;
+                background-color: rgb(255, 72, 0);
+                border: 0px solid transparent;
+                height: 50px;
+                width: 200px;
+                border-radius: 10px;
+            }
+            .contactmenow:hover{
+                background-color: rgb(0, 0, 48);
+                rotate: -3deg;
+                transition: 200ms;
+                cursor: pointer;
+            }
+            .body5{
+                background-color: rgb(238, 246, 255);
+                height: 25rem;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                padding-bottom: 6rem;
+            }
+            .ifnot{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                color: rgb(0, 0, 48);
+            }
+            .h15{
+                font-size: 50px;
+                text-align: center;
+            }
+            .h35{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 20px;
+                text-align: center;
+                width: 300px;
+                margin-top: 0px;
+                color: rgb(255, 72, 0);
+            }
+            .form{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .forms{
+                margin: 1rem;
+                border: 0px solid white;
+                width: 25rem;
+                outline: none;
+                height: 3rem;
+                padding-left: 1rem;
+                border-radius: 5px;
+            }
+            .forms::placeholder{
+                font-family:Arial, Helvetica, sans-serif;
+            }
+            .sendmessage{
+                background-color: rgb(255, 72, 0);
+                border: 0px solid white;
+                height: 3rem;
+                width: 26rem;
+                margin: 1rem;
+                color: white;
+                border-radius: 5px;
+                font-weight: bolder;
+                font-size: 20px;
+            }
+            .sendmessage:hover{
+                background-color: rgb(0, 0, 48);
+                rotate: -2deg;
+            }
+            #message{
+                height: 8rem;
+                padding-top: 10px;
+            }
+            .body6{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 500px;
+                width: 100%;
+                color: white;                
+                /* background-color: rgb(0, 0, 48); */
+                background-color: #050233;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23382001' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%233A3E3E'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+            }
+            .whitelogo{
+                height: 200px;
+                width: auto;
+            }
+            .a,.b,.c{
+                margin: 5px;
+            }
+            .b,.c{
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                <img class="logo" src="HIGHLIGHT LOGO.png" alt="">
+                
+            </div>
+            <h1 class="highlights_tech_ltd">MY PORTFOLIO...</h1>
+            <div class="menu">
+                <a class="anchor" href="/home">Home</a>
+                <a class="anchor" href="#about">About</a>
+                <a class="anchor" href="#contacts">Contact</a>
+                <a class="anchor" href="#services">Services</a>
+                <a class="anchor" href="/MY CV.png">Portfolio</a>
+            </div>
+            <button onclick="window.location = 'https://wa.link/1ixxrs'" class="message_me" >Message Me <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+              </svg></button>
+            
+        </div>
+        <div class="body1">
+                <div class="write">
+                    <h5 class="h5">Get every possible solution</h5>
+                    <h1 class="h1">I'm designer <br> Oodo Abel Oche</h1>
+                    <h2 class="h3">I am a highly motivated individual with a strong work ethic<br> and a genuine  interest in creating beautiful and functional designs. <br> I am also a team player and I am always willing to collaborate with <br> others to achieve the best possible results.</h2>
+                </div>
+                <div class="dp">
+                    <img class="mypix" src="PASSPORT.jpg" alt="Abel's picture">
+                </div>
+        </div>
+        
+        <div class="body2">
+            <div class="left2">
+                <h1 class="h12">Designing With Passion While <br> Exploring The World</h1>
+                <h3 class="design_is_not_marely">Design is not merely about aesthetics; it is a thoughtful process that involves problem-solving and intentional decision-making. A well-designed piece considers elements such as color, typography, layout, and imagery to create a harmonious and visually appealing composition. Graphic designers are akin to visual storytellers, using their skills to weave narratives and evoke emotions through their work</h3>
+            </div>
+            <div class="right2">
+                <h1 class="any">Any Type Of Query 
+                    & Discussion. <br>
+                    <h4 class="gettome">get to me quickest</h4>
+                    
+                    <h2 class="email">get2abeloodo@gmail.com</h2>
+                </h1>
+            </div>
+        </div>
+        <div class="line">
+
+        </div>
+        <div class="body3" id="services">
+            <div class="whatservice">
+                <h1>What services you will get <br> from me!</h1>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="round1">
+                        <img src="/MK UP.png" alt="">
+                    </div>
+                    <h1 class="uiux">
+                        UI/UX Design
+                    </h1>
+                    <h4 class="ryt">
+                        Free resource that will help nderstand thecv designc process and improve theroi nderstand the design process andisei impro are of vquality
+                    </h4>
+                </div>
+                <div class="card">
+                    <div class="round2">
+                        <img src="/Twins.jpg" alt="">
+                    </div>
+                    <h1 class="uiux">
+                        Graphic Design
+                    </h1>
+                    <h4 class="ryt">
+                        Free resource that will help nderstand thecv designc process and improve theroi nderstand the design process andisei impro are of vquality
+                    </h4>
+                </div>
+                <div class="card">
+                    <div class="round3">
+                        <img src="/Web-Design-Company-in-Johor-Bahru-768x337.png" alt="web design image">
+                    </div>
+                    <h1 class="uiux">
+                        Web Design
+                    </h1>
+                    <h4 class="ryt">
+                        Free resource that will help nderstand thecv designc process and improve theroi nderstand the design process andisei impro are of vquality.
+                    </h4>
+                </div>
+            </div>
+            <div class="patronize">
+                master of 'em all
+            </div>
+        </div>
+        <div class="body4" id="contacts" >
+            <h1 class="dont">
+                Dont worry for contact <br> i'm available
+            </h1>
+            <button class="contactmenow">
+                Contact me now
+            </button>
+        </div>
+        <div class="body5">
+            <div class="ifnot">
+                <h1 class="h15">If Not Now, When? <br> Let’s Work Together!</h1>
+                <h3 class="h35">Reach out to me now lets discuss business and make magic</h3>
+            </div>
+            <div class="form">
+            <input class="forms" type="text" placeholder="Fullname">
+            <input class="forms" type="text" placeholder="Email address">
+            <textarea id="message" class="forms" type="text" placeholder="Your message"></textarea>
+            <button class="sendmessage">Send Message</button>
+            </div>
+        </div>
+        <div class="body6">
+            <img class="whitelogo" src="/HIGHLIGHT LOGO white.jpg" alt="company logo">
+            <h1 class="a">HIGHLIGHTS TECHNOLOGY LTD</h1>
+            <h3 class="b">College Road Sabon Tasha Kaduna Nigeria</h3>
+            <h3 class="c">+234 812 1315 694</h3>
+        </div>
+        
+    </body>
+</html>
